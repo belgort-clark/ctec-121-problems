@@ -1,3 +1,3 @@
 # CTEC 121 Problems
 
-Transfered to clark-college-ctec
+Transferred to clark-college-ctec
