@@ -10,7 +10,7 @@ def exists():
 @check50.check(exists)
 def testhello():
     """input of HELLO yields output of hello"""
-    check50.run("python3 indoor.py").stdin("HELLO", prompt=False).stdout("jello").exit()
+    check50.run("python3 indoor.py").stdin("HELLO", prompt=False).stdout("hello").exit()
 
 
 @check50.check(exists)
