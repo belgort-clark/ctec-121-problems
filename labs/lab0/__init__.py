@@ -18,9 +18,9 @@ def testbruce():
 @check50.check(exists)
 def testjacqueline(exists):
     """input of Jacqueline, the numbers 22 and 0 yields output of 'Hey Jacqueline! The sum of 22 and 0 is 22.'"""
-    check50.run("python3 lab0.py").stdin("Bruce", prompt=True).stdin(
-        "42", prompt=True
-    ).stdin("11", prompt=True).stdout(
+    check50.run("python3 lab0.py").stdin("Jacqueline", prompt=True).stdin(
+        "22", prompt=True
+    ).stdin("0", prompt=True).stdout(
         "Hey Jacqueline! The sum of 22 and 0 is 22.\n"
     ).exit()
 
@@ -28,8 +28,8 @@ def testjacqueline(exists):
 @check50.check(exists)
 def testrashida(exists):
     """input of Rashida, the numbers -42 and -43 yields output of 'Hey Rashida! The sum of -42 and-43 is -85.'"""
-    check50.run("python3 lab0.py").stdin("Bruce", prompt=True).stdin(
-        "42", prompt=True
-    ).stdin("11", prompt=True).stdout(
+    check50.run("python3 lab0.py").stdin("Rashida", prompt=True).stdin(
+        "-42", prompt=True
+    ).stdin("-43", prompt=True).stdout(
         "Hey Rashida! The sum of -42 and -43 is -85.\n"
     ).exit()
