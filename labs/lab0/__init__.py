@@ -3,14 +3,14 @@ import check50
 
 @check50.check()
 def exists():
-    """indoor.py exists"""
-    check50.exists("indoor.py")
+    """lab0.py exists"""
+    check50.exists("lab0.py")
 
 
 @check50.check(exists)
 def testhello():
     """input of HELLO yields output of hello"""
-    check50.run("python3 indoor.py").stdin("HELLO", prompt=False).stdout("hello").exit()
+    check50.run("python3 lab0.py").stdin("HELLO", prompt=False).stdout("hello").exit()
 
 
 @check50.check(exists)
