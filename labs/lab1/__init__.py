@@ -23,5 +23,5 @@ def testviktor():
     check50.run("python3 lab1.py").stdin("Viktor", prompt=True).stdin(
         "15.25", prompt=True
     ).stdin("38", prompt=True).stdout("\n").stdout(
-        "Name: Viktor\nHourly wage: $15.25\n"
+        r"Name: Viktor\nHourly wage: $15.25\n"
     ).exit()
