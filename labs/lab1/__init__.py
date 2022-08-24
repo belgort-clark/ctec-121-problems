@@ -17,6 +17,15 @@ def testviktor():
     ).stdin("38", prompt=True).stdout(regex(output), output, regex=True).exit()
 
 
+@check50.check(exists)
+def testjerome():
+    """input of Jerome, hourly wage 15.25, hours worked 42, yields Net Pay of $511.48'"""
+    output = "Name: Jerome\nHourly wage: $15.25\nLocal taxes: $65.58\nMedical insurance: $78.69\nOvertime pay: $45.75\nTotal gross earnings: $655.75\nNet pay: $511.48\n"
+    check50.run("python3 lab1.py").stdin("Viktor", prompt=True).stdin(
+        "15.25", prompt=True
+    ).stdin("42", prompt=True).stdout(regex(output), output, regex=True).exit()
+
+
 def regex(text):
     """match case-sensitively, allowing for characters (not numbers) on either side. Ensure not negative with no dashes"""
     return rf"^[^\d-]*{escape(text)}[^\d]*$"
