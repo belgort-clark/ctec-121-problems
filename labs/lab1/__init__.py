@@ -1,5 +1,4 @@
 import check50
-from re import regex
 
 
 @check50.check()
