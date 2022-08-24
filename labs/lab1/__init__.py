@@ -14,3 +14,8 @@ def testviktor():
     check50.run("python3 lab1.py").stdin("Viktor", prompt=True).stdin(
         "15.25", prompt=True
     ).stdin("38", prompt=True).stdout(regex(output), output, regex=True).exit()
+
+
+def regex(text):
+    """match case-sensitively, allowing for characters (not numbers) on either side. Ensure not negative with no dashes"""
+    return rf"^[^\d-]*{escape(text)}[^\d]*$"
