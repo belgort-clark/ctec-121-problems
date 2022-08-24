@@ -19,9 +19,8 @@ def testviktor():
 
 @check50.check(exists)
 def testjerome():
-    help = "Oh no!"
     """input of Jerome, hourly wage 15.25, hours worked 42, yields Net Pay of $511.48'"""
-    output = "Name: Jerom\nHourly wage: $15.25\nLocal taxes: $65.58\nMedical insurance: $78.69\nOvertime pay: $45.75\nTotal gross earnings: $655.75\nNet pay: $511.48\n"
+    output = "Name: Jerome\nHourly wage: $15.25\nLocal taxes: $65.58\nMedical insurance: $78.69\nOvertime pay: $45.75\nTotal gross earnings: $655.75\nNet pay: $511.48\n"
     check50.run("python3 lab1.py").stdin("Jerome", prompt=True).stdin(
         "15.25", prompt=True
     ).stdin("42", prompt=True).stdout(regex(output), output, regex=True).exit()
