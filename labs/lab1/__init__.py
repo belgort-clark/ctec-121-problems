@@ -22,4 +22,6 @@ def testviktor():
     """input of Viktor, hourly wage 15.25, hours worked 38, yields Net Pay of $452.01'"""
     check50.run("python3 lab1.py").stdin("Viktor", prompt=True).stdin(
         "15.25", prompt=True
-    ).stdin("38", prompt=True).stdout("Name: Viktor\nHourly wage: $15.25\n").exit()
+    ).stdin("38", prompt=True).stdout(
+        "Name: Viktor\nHourly wage: $15.25\n", regex=False
+    ).exit()
