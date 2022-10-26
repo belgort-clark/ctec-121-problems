@@ -52,7 +52,7 @@ def test_alphabet_text():
 
 def regex(text):
     """match case-sensitively with any characters preceding and only whitespace after"""
-    return rf"^.*{escape(text)}\s*$"
+    return fr'^.*{escape(text)}\s*$'
 
 
 def check_font_rendering(font, text):
@@ -62,6 +62,4 @@ def check_font_rendering(font, text):
         output = ""
         for line in lines:
             output += line
-        check50.run(f"python3 figlet.py -f {font}").stdin(text, prompt=False).stdout(
-            regex(output), output, regex=True
-        ).exit(0)
+        check50.run(f"python3 figlet.py -f {font}").stdin(text, prompt=False).stdout(regex(output), output, regex=True).exit(0)
