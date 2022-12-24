@@ -16,4 +16,4 @@ def testhello():
 
 def regex(text):
     """match case-sensitively, allowing for characters on either side."""
-    return rf"^.*{escape(text)}.*$"
+    return rf"^{escape(text)}$"
