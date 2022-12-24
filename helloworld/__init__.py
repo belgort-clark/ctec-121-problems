@@ -1,4 +1,5 @@
 import check50
+from re import escape
 
 
 @check50.check()
@@ -12,3 +13,6 @@ def testhello():
     """Prints out hello world"""
     check50.run("python3 helloworld.py").stdout("Hello, World").exit()
 
+def regex(text):
+    """match case-sensitively, allowing for characters on either side."""
+    return rf"^.*{escape(text)}.*$"
