@@ -12,7 +12,7 @@ def exists():
 def testhello():
     """Prints out hello world"""
     output = "Hello, world!"
-    check50.run("python3 helloworld.py").stdin().stdout(regex(output), output, regex=True).exit()
+    check50.run("python3 helloworld.py").stdin("",prompt=False).stdout(regex(output), output, regex=True).exit()
 
 def regex(text):
     """match case-sensitively, allowing for characters on either side."""
