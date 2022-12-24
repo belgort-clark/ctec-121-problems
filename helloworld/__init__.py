@@ -11,7 +11,8 @@ def exists():
 @check50.check(exists)
 def testhello():
     """Prints out hello world"""
-    check50.run("python3 helloworld.py").stdout("Hello, World").exit()
+    output = "Hello, world!"
+    check50.run("python3 helloworld.py").stdout(regex(output), output, regex=True).exit()
 
 def regex(text):
     """match case-sensitively, allowing for characters on either side."""
