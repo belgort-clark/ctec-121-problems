@@ -1,5 +1,5 @@
 import check50
-from re import escape
+import re
 
 
 @check50.check()
@@ -11,10 +11,7 @@ def exists():
 @check50.check(exists)
 def testhello():
     """Prints out hello world"""
-    output = "Hello, world!"
-    check50.run("python3 helloworld.py").stdin("",prompt=False).stdout(regex(output), output, regex=True).exit()
-
-def regex(text):
-    """match case-sensitively, allowing for characters on either side."""
-    print(rf"^{escape(text)}$")
-    return rf"^{escape(text)}$"
+    output = check50.run("python3 helloworld.py").stdout()
+    if not re.match("[Hh]ello, world!?", output):
+        raise check50.Mismatch("hello, world", output)
+    
