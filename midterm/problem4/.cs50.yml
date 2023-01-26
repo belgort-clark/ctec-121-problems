@@ -1,7 +1,7 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !require problem1.py
+    - !require problem4.py
   style: false
 
 check50:
