@@ -4,6 +4,6 @@ submit50:
     - !include "*.py"
     - !require meal.py
   style: false
-
+  
 check50:
   files: *submit50_files
