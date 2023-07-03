@@ -6,4 +6,3 @@ submit50:
 
 check50:
   files: *submit50_files
-  style: true
