@@ -4,7 +4,7 @@ submit50:
     - !include "*.py"
     - !include "*.txt"
     - !require figlet.py
-  style: false
+  style: true
 
 check50:
   files: *submit50_files

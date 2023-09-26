@@ -3,7 +3,7 @@ submit50:
     - !exclude "*"
     - !require seasons.py
     - !require test_seasons.py
-  style: false
+  style: true
   
 check50:
   files: *submit50_files
