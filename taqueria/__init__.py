@@ -41,7 +41,7 @@ def test_basic_order_2():
 
 @check50.check(test_EOF)
 def test_basic_order_3():
-    """input of \"Baja Taco\", \"Quesadilla\", and \"Super Burrito\" results in $21.00"""
+    """input of \"Baja Taco\", \"Quesadilla\", and \"Super Burrito\" results in $21.25"""
     items = ["Baja Taco", "Quesadilla", "Super Burrito"]
     output = 21.0
     check50.run("python3 taqueria.py").stdin(items[0], prompt=True).stdin(
