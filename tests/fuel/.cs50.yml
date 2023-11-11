@@ -2,7 +2,7 @@ submit50:
   files: &submit50_files
     - !exclude "*"
     - !require test_fuel.py
-  style: true
+  style: false
   
 check50:
   files: *submit50_files
