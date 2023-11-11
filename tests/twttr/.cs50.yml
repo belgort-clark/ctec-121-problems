@@ -1,8 +1,0 @@
-submit50:
-  files: &submit50_files
-    - !exclude "*"
-    - !require test_twttr.py
-  style: true
-  
-check50:
-  files: *submit50_files
