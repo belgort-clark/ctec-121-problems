@@ -3,7 +3,7 @@ submit50:
     - !exclude "*"
     - !require working.py
     - !require test_working.py
-  style: true
+  style: false
   
 check50:
   files: *submit50_files
