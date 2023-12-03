@@ -3,7 +3,7 @@ submit50:
     - !exclude "*"
     - !require numb3rs.py
     - !require test_numb3rs.py
-  style: true
+  style: false
   
 check50:
   files: *submit50_files
