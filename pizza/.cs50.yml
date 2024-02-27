@@ -3,6 +3,6 @@ submit50:
     - !exclude "*"
     - !require pizza.py
   style: true
-
+  
 check50:
   files: *submit50_files

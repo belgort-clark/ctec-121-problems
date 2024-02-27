@@ -56,9 +56,7 @@ def test_clean_file():
     check50.run("python3 scourgify.py before.csv after.csv").exit(0)
     check50.exists("after.csv")
 
-    with open("after.csv", "r") as student_file, open(
-        "after_correct.csv"
-    ) as check_file:
+    with open("after.csv", "r") as student_file, open("after_correct.csv") as check_file:
         compare_csv_files(student_file, check_file)
 
 
@@ -68,9 +66,7 @@ def test_clean_file_long():
     check50.run("python3 scourgify.py before_long.csv after_long.csv").exit(0)
     check50.exists("after_long.csv")
 
-    with open("after_long.csv", "r") as student_file, open(
-        "after_long_correct.csv"
-    ) as check_file:
+    with open("after_long.csv", "r") as student_file, open("after_long_correct.csv") as check_file:
         compare_csv_files(student_file, check_file)
 
 
@@ -79,11 +75,8 @@ def compare_csv_files(student_file, check_file):
 
     student_output = student_file.read().replace("\r\n", "\n").replace("\r", "\n")
     correct_output = check_file.read().replace("\r\n", "\n").replace("\r", "\n")
-
+    
     if student_output == correct_output + correct_output:
-        raise check50.Failure(
-            "scourgify.py does not produce CSV with specified format",
-            help="Did you mistakenly open your file in append mode?",
-        )
+        raise check50.Failure("scourgify.py does not produce CSV with specified format", help="Did you mistakenly open your file in append mode?")
     elif student_output != correct_output:
         raise check50.Failure("scourgify.py does not produce CSV with specified format")

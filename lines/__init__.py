@@ -67,11 +67,9 @@ def test_docstring():
 def test_open_source():
     """lines.py yields 2058 given 2058 lines of code in an open-source library file"""
     check50.include(f"two-thousand-fifty-eight.py")
-    check50.run(f"python3 lines.py two-thousand-fifty-eight.py").stdout(
-        regex(2058), "2058", regex=True
-    ).exit(0)
+    check50.run(f"python3 lines.py two-thousand-fifty-eight.py").stdout(regex(2058), "2058", regex=True).exit(0)
 
 
 def regex(lines):
     """accept line number without digits before or after"""
-    return rf"^\D*{escape(str(lines))}\D*$"
+    return fr'^\D*{escape(str(lines))}\D*$'

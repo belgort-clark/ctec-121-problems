@@ -57,7 +57,7 @@ def test_regular():
 
 def regex(text):
     """match case-sensitively with any characters preceding and only whitespace after"""
-    return rf"^.*{escape(text)}\s*$"
+    return fr'^.*{escape(text)}\s*$'
 
 
 def check_table_rendering(pizza):
@@ -68,6 +68,4 @@ def check_table_rendering(pizza):
         output = ""
         for line in lines:
             output += line
-        check50.run(f"python3 pizza.py {pizza}.csv").stdout(
-            regex(output), output, regex=True
-        ).exit(0)
+        check50.run(f"python3 pizza.py {pizza}.csv").stdout(regex(output), output, regex=True).exit(0)
