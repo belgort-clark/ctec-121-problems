@@ -17,7 +17,7 @@ match sys.argv[1]:
                     continue
                 elif "def" in line.strip():
                     counter += 1
-
+            
             # Ensure there are at least 3 top-level functions other than main
             assert counter >= 3
 
@@ -27,5 +27,5 @@ match sys.argv[1]:
             for line in file.readlines():
                 if "def test_" in line:
                     counter += 1
-
+            
             assert counter >= 3
