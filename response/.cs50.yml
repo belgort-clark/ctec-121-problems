@@ -2,7 +2,7 @@ submit50:
   files: &submit50_files
     - !exclude "*"
     - !require response.py
-  style: true
+  style: false
   
 check50:
   files: *submit50_files
