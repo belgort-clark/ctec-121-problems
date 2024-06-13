@@ -4,6 +4,6 @@ submit50:
     - !require seasons.py
     - !require test_seasons.py
   style: true
-  
+
 check50:
   files: *submit50_files
