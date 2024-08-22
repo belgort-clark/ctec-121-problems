@@ -3,6 +3,7 @@ submit50:
     - !exclude "*"
     - !require indoor.py
   style: true
+  design: true
 
 check50:
   files: *submit50_files
