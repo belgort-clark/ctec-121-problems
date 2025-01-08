@@ -10,8 +10,8 @@ def exists():
 
 @check50.check(exists)
 def testhello():
-    """Prints out hello world"""
+    """Prints out Hello, World!"""
     output = check50.run("python3 helloworld.py").stdout()
-    if not re.match("[Hh]ello,? [Ww]orld!?", output):
-        raise check50.Mismatch("hello, world", output)
+    if not re.match("Hello, World!", output):
+        raise check50.Mismatch("Hello, World", output)
     
