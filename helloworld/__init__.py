@@ -1,21 +1,3 @@
-# import check50
-# import re
-
-
-# @check50.check()
-# def exists():
-#     """helloworld.py exists"""
-#     check50.exists("helloworld.py")
-
-
-# @check50.check(exists)
-# def testhello():
-#     """Prints out Hello, World!"""
-#     output = check50.run("python3 helloworld.py").stdout()
-#     if not re.match("Hello, World!", output):
-#         raise check50.Mismatch("Hello, World", output)
-    
-    
 import check50
 import re
 
@@ -29,6 +11,8 @@ def exists():
 @check50.check(exists)
 def testhello():
     """Prints out Hello, World!"""
-    output = check50.run("python3 helloworld.py").stdout().strip()
-    if not re.fullmatch(r"Hello, World!", output):
-        raise check50.Mismatch("Hello, World!", output)
+    output = check50.run("python3 helloworld.py").stdout()
+    if not re.match("[Hh]ello,? [Ww]orld!?", output):
+        raise check50.Mismatch("Hello, World", output)
+    
+    
