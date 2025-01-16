@@ -1,7 +1,7 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !require function.py
+    - !require functions.py
   style: true
 
 check50:
