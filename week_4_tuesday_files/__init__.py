@@ -8,8 +8,4 @@ def exists():
     check50.exists("problem2.py")
     check50.exists("problem3.py")
     check50.exists("problem4.py")
-    check50.exit()
-    
-    
-
 
