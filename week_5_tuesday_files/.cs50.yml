@@ -1,7 +1,10 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !require *.py
+    - !require demo1.py
+    - !require demo2.py
+    - !require demo3.py
+    - !require demo4.py
   style: true
 
 check50:
