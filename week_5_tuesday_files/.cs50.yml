@@ -1,7 +1,7 @@
 submit50:
   files: &submit50_files
-    - !exclude "*"
-    - !require "*.py"  # Accepts any Python file
+    - !exclude "*"  # Exclude all files by default
+    - !include "*"  # Include any files users submit
   style: true
 
 check50:
