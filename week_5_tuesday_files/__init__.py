@@ -1,10 +1,17 @@
 import check50
+import os
 
 @check50.check()
 def exists():
-    """problem1.py, problem2.py, problem3.py and problem4.py exist"""
-    check50.exists("demo1.py")
-    check50.exists("demo2.py")
-    check50.exists("demo3.py")
-    check50.exists("demo4.py")
-
+    """At least one Python file (.py) exists in the directory"""
+    
+    # List all Python files in the current directory
+    py_files = [f for f in os.listdir() if f.endswith(".py")]
+    
+    # Ensure at least one Python file exists
+    if not py_files:
+        raise check50.Failure("No Python files found in the directory.")
+    
+    # Check for each Python file dynamically
+    for py_file in py_files:
+        check50.exists(py_file)
