@@ -1,7 +1,7 @@
 submit50:
   files: &submit50_files
-    - !exclude "*"  # Exclude all files by default
-    - !include "*"  # Include any files users submit
+    - !exclude "*"
+    - !include "*"
   style: true
 
 check50:

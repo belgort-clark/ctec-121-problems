@@ -1,7 +1,7 @@
 import check50
 from re import escape
 
-price = 37817.3283
+price = 97845.0243
 
 
 @check50.check()
@@ -28,9 +28,7 @@ def test_single_coin():
     """bitcoin.py provides price of 1 Bitcoin to 4 decimal places"""
     coins = 1
     amount = coins * price
-    check50.run(f"python3 testing.py {coins}").stdout(
-        regex(amount), f"${amount:,.4f}", regex=True
-    ).exit(0)
+    check50.run(f"python3 testing.py {coins}").stdout(regex(amount), f'${amount:,.4f}', regex=True).exit(0)
 
 
 @check50.check(exists)
@@ -38,9 +36,7 @@ def test_two_coins():
     """bitcoin.py provides price of 2 Bitcoin to 4 decimal places"""
     coins = 2
     amount = coins * price
-    check50.run(f"python3 testing.py {coins}").stdout(
-        regex(amount), f"${amount:,.4f}", regex=True
-    ).exit(0)
+    check50.run(f"python3 testing.py {coins}").stdout(regex(amount), f'${amount:,.4f}', regex=True).exit(0)
 
 
 @check50.check(exists)
@@ -48,12 +44,10 @@ def test_decimal_coins():
     """bitcoin.py provides price of 2.5 Bitcoin to 4 decimal places"""
     coins = 2.5
     amount = coins * price
-    check50.run(f"python3 testing.py {coins}").stdout(
-        regex(amount), f"${amount:,.4f}", regex=True
-    ).exit(0)
+    check50.run(f"python3 testing.py {coins}").stdout(regex(amount), f'${amount:,.4f}', regex=True).exit(0)
 
 
 def regex(amount):
     """match case-sensitively with any characters before or after"""
-    amount = f"${amount:,.4f}"
-    return rf"^.*{escape(amount)}.*$"
+    amount = f'${amount:,.4f}'
+    return fr'^.*{escape(amount)}.*$'
